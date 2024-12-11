@@ -29,6 +29,16 @@ export async function getSingleBand(slug) {
   return data;
 }
 
+export async function getSchedule() {
+  const response = await fetch(`${url}schedule`, {
+    method: "GET",
+    headers: headerList,
+  });
+
+  const data = await response.json();
+  return data;
+}
+
 // // GET by ID
 // export async function getSubById(id) {
 //   const response = await fetch(`${url}?id=eq.${id}`, {

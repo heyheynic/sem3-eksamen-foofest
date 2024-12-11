@@ -1,12 +1,14 @@
 import LineUpCardCTA from "@/components/LineUpCardCTA";
 import ButtonSharpEdge from "@/components/ButtonSharpEdge";
 
-import { getBands } from "@/lib/api";
+import { getBands, getSchedule } from "@/lib/api";
 
 async function page() {
   const bands = await getBands();
 
-  console.log(bands[22]);
+  const schedule = await getSchedule();
+
+  console.log(schedule);
 
   return (
     <div>
